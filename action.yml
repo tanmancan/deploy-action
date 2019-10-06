@@ -1,12 +1,35 @@
-name: 'Container Action Template'
-description: 'Get started with Container actions'
-author: 'GitHub'
-inputs: 
-  myInput:
-    description: 'Input to use'
-    default: 'world'
+name: 'Deploy Action'
+
+description: 'Action to deploy code via secure copy and ssh key'
+
+author: 'Tanveer Karim'
+
+inputs:
+  user:
+    description: 'Remote user'
+    required: true
+
+  host:
+    description: 'Remote host'
+    required: true
+
+  port:
+    description: 'Remote port'
+    required: false
+    default: 22
+
+  key:
+    description: 'Remote ssh key'
+    required: true
+
+  local_path:
+    description: 'Local file location'
+    required: true
+
+  remote_path:
+    description: 'Remote file location'
+    required: true
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.myInput }}
