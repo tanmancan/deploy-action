@@ -1,6 +1,6 @@
 #!/bin/sh -l
 
-echo "$INPUT_KEY" > KEY_FILE
+echo "${INPUT_KEY}" > KEY_FILE
 
 ls -la
 
