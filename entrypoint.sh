@@ -1,5 +1,6 @@
 #!/bin/sh -l
 
+ls -la
 echo $INPUT_USER
 echo $INPUT_HOST
 echo $INPUT_PORT
